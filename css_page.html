@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+        }
+        table {
+            font-family: Arial;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        h2{
+            color: #008080;
+            font-family: Arial;
+            font-style: inherit;
+            text-align: center;
+        }
+
+        
+        .column {
+            float: left;
+            padding: 15px;
+            border: 25px solid #7d7d7d;
+            width: 33.33%;
+
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width:600px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        .box {
+            background-color: lightgrey;
+            width: 300px;
+            border: 25px solid green;
+            padding: 25px;
+            margin: 25px;
+        }
+        td, th {
+            border: 1px solid #008080;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #008080;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Styling the columns</h2>
+<div class="row">
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+  <div class="column">
+    <h2>Column</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  </div>
+</div>
+
+<h2>CSS/HTML Table</h2>
+<div>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Capital City</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>Kenya</td>
+            <td>Nairobi</td>
+            <td>50m</td>
+        </tr>
+        <tr>
+            <td>Rwanda</td>
+            <td>Kigali</td>
+            <td>20m</td>
+        </tr>
+        <tr>
+            <td> Uganda</td>
+            <td>Kampala</td>
+            <td>45m</td>
+        </tr>
+        <tr>
+            <td>Tanzania</td>
+            <td>Dodoma</td>
+            <td>46m</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
