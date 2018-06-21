@@ -16,6 +16,7 @@ function UserDetails() {
     document.getElementById("output").innerHTML = message;
 }
 
+
 //Closures
 function calculate() {
    var number=document.getElementById('number').value;
@@ -30,7 +31,7 @@ function calculate() {
     document.getElementById("result").innerHTML = calcSum();
 }
 
-
+//Prototype
 function buttonClicked () {
     var title = document.getElementById('title').value;
     var author = document.getElementById('author').value;
