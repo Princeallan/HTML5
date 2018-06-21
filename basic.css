@@ -1,31 +1,38 @@
-canvas{
-	background: lightgray;
-}
+    canvas{
+        background: lightgray;
+    }
 
-body{
-	margin: 0;
-}
+    body{
+        margin: 0;
+    }
 
-ul {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: beige;
-    list-style-type: none;
-}
+    #div1 {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
 
-li {
-    float: left;
-}
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: beige;
+        list-style-type: none;
+    }
 
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+    li {
+        float: left;
+    }
 
-li a:hover {
-    background-color: #008080;
-}
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #008080;
+    }
