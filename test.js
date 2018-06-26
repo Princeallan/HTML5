@@ -1,3 +1,47 @@
+'use strict';
+var promiseCount = 0;
+
+function testPromise() {
+    let thisPromiseCount = ++promiseCount;
+
+    let log = document.getElementById('log');
+    log.insertAdjacentHTML('beforeend', thisPromiseCount +
+        ') Started (<small>Sync code started</small>)<br/>');
+
+    let p1 = new Promise(
+        (resolve, reject) => {
+            log.insertAdjacentHTML('beforeend', thisPromiseCount +
+                ') Promise start(<small>Async code started</small>)<br/>');
+            // This is only an example to create asynchronism
+            window.setTimeout(
+                function() {
+                    resolve(thisPromiseCount);
+                },
+                Math.random() * 2000 + 3000);
+        }
+    );
+
+    p1.then(
+        function(val) {
+            log.insertAdjacentHTML('beforeend', val +
+                ') Promise fulfilled (<small>Async code terminated</small>)<br/>');
+        }).catch(
+        // Log the rejection reason
+        (reason) => {
+            console.log('Promise rejected ('+reason+') here.');
+        });
+
+    log.insertAdjacentHTML('beforeend', thisPromiseCount +
+        ') Promise made (<small>Sync code terminated</small>)<br/>');
+}if ("Promise" in window) {
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click",testPromise);
+} else {
+    log = document.getElementById('log');
+    log.innerHTML = "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
+}
+
+
 
 //Functions
 function UserDetails() {
@@ -38,33 +82,26 @@ function buttonClicked () {
 
 
     function Book(title,author) {
-        this.title = title,
-            this.author = author,
-
-            this.name = function () {
-                return this.title + " " + this.author;
-            }
-
+            this.title = title;
+            this.author = author;
     }
+
     Book.prototype={
         constructor: Book,
-        isbn:45678
+        isbn:45678,
+
+        name : function () {
+            return book.title + " " + this.author;
+        }
+
     }
 
-    var book = new Book();
-    console.log(book.isbn);
+    var book = new Book(title,author);
     var message = book.name();
-    document.getElementById('details').innerHTML = message;
 
-    console.log(Book.prototype);
+    document.getElementById('details').innerHTML = message;
+    
 }
 
-function Person(first, last, age, gender, interests) {
-    this.name = {
-        first,
-        last
-    };
-    this.age = age;
-    this.gender = gender;
-    this.interests = interests;
-};
+
+

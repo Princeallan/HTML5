@@ -5,17 +5,20 @@
     <link rel="stylesheet" href="style.css">
 
 
-
 </head>
 <body>
 
-<h2>Javascript Practice</h2>
+    <h2>Javascript Practice</h2>
+
 <div class="container">
+    <button  class="info" onclick="myProms()">The time is?</button>
+    <p id="time"> </p>
+
     <h2>Objects</h2>
     <form id="frm1" action="#">
         First name: <input type="text" id="fname" name="firstname" required><br>
         Last name:  <input type="text" id="lname" name="lastname" required><br><br>
-        <button type="button" onclick="UserDetails()">User Details</button>
+        <button type="button" class="info" onclick="UserDetails()">User Details</button>
     </form>
     <p id="output"></p>
 </div>
@@ -26,7 +29,7 @@
     <input type="number" id="number" name="number"><br>
     <smal>Another number</smal>
     <input type="number" id="number2" name="number2"><br>
-    <button type="button" onclick="calculate()">Multiply by 5 </button>
+    <button type="button" class="info" onclick="calculate()">Multiply by 5 </button>
 
     <p id="result"></p>
 
@@ -38,11 +41,37 @@
     <input type="text" id="title" name="title"><br>
     <small>Book Author:</small>
     <input type="text" id="author" name="author"><br>
-    <button type="button" onclick="buttonClicked()">Click me</button>
+    <button type="button" class="info" onclick="buttonClicked()">Click me</button>
 
     <p id="details"></p>
 </div>
+    <hr>
+    <div class="container">
+        <h2>Mouse Over Me</h2>
+        <div class="mousehover" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+            Mouse Over Me</div>
+    </div>
 
+<div class="container">
+    <button class="info" id="btn">Make a promise!</button>
+    <div id="log"></div>
+</div>
+
+
+    <script>
+        <!--
+
+
+
+        function mouseOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+
+        function mouseOut(obj) {
+            obj.innerHTML = "Mouse Over Me"
+        }
+        -->
+    </script>
 <script type="text/javascript" src="test.js"></script>
 </body>
 </html>
